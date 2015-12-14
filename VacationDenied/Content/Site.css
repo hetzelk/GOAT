@@ -36,3 +36,8 @@ input[type="select"] {
         padding: 0;
     }
 }
+#calendar {
+    background-color:black;
+    padding: 5px;
+    color: white;
+}
