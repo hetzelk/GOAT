@@ -37,12 +37,15 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
-
+        
         <div class="parent2">
             <a runat="server" href="~/Calendar.aspx"><div class="test1"><i class="fa fa-calendar fa-2x"></i></div></a>
             <a runat="server" href="~/Account/Register"><div class="test2"><i class="fa fa-plus-circle fa-2x"></i></div></a>
             <a runat="server" href="~/Account/Login"><div class="test3"><i class="fa fa-user fa-2x"></i></div></a>
-            <a runat="server" href="~/"><div class="test4"><i class="fa fa-home fa-3x"></i></div></a>
+            <a runat="server" href="~/" title="Home"><div class="test4"><i class="fa fa-home fa-3x"></i></div></a>
+           <!-- <a runat="server" href="~/"><div class="test5"><i class="fa fa-user fa-3x"></i></div></a>
+            <a runat="server" href="~/"><div class="test6"><i class="fa fa-plus-circle fa-2x"></i></div></a>
+            <a runat="server" href="~/"><div class="test7"><i class="fa fa-home fa-2x"></i></div></a>-->
             <div class="mask2"><i class="fa fa-home fa-3x"></i></div>
         </div>
         <div class="container body-content">
@@ -60,6 +63,9 @@
     var active2 = false;
     var active3 = false;
     var active4 = false;
+    var active5 = false;
+    var active6 = false;
+    var active7 = false;
 
     $('.parent2').on('mousedown touchstart', function () {
 
@@ -71,10 +77,19 @@
         else $(this).find('.test3').css({ 'background-color': 'silver', 'transform': 'none' });
         if (!active4) $(this).find('.test4').css({ 'background-color': 'gray', 'transform': 'translate(125px,0px)' });
         else $(this).find('.test4').css({ 'background-color': 'silver', 'transform': 'none' });
+        if (!active5) $(this).find('.test5').css({ 'background-color': 'gray', 'transform': 'translate(175px,50px)' });
+        else $(this).find('.test5').css({ 'background-color': 'silver', 'transform': 'none' });
+        if (!active6) $(this).find('.test6').css({ 'background-color': 'gray', 'transform': 'translate(125px,125px)' });
+        else $(this).find('.test6').css({ 'background-color': 'silver', 'transform': 'none' });
+        if (!active7) $(this).find('.test7').css({ 'background-color': 'gray', 'transform': 'translate(55px,175px)' });
+        else $(this).find('.test7').css({ 'background-color': 'silver', 'transform': 'none' });
         active1 = !active1;
         active2 = !active2;
         active3 = !active3;
         active4 = !active4;
+        active5 = !active5;
+        active6 = !active6;
+        active7 = !active7;
 
     });
 });</script>

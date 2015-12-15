@@ -99,7 +99,7 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
     top:25%;
   left:25%;
   z-index:19;
-  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .2s;
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .1s;
 }
 .test3 {
   width:60%;
@@ -112,7 +112,7 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
   line-height:70px;
     top:25%;
   left:25%;
-  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .4s;  
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .2s;  
 }
   .test4 {
   width:60%;
@@ -125,8 +125,55 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
   line-height:70px;
   top:25%;
   left:25%;
-  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .6s;  
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .3s;  
 }
+
+.test5 {
+  width:60%;
+  height:60%;
+  background-color:dimGray;
+  border-radius:50%;
+  position:absolute;
+  color:white;
+  text-align:center;
+  line-height:70px;
+  top:25%;
+  left:25%;
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .4s;
+  box-shadow: 0px 0px 50px 5px black;
+}
+
+.test6 {
+  width:60%;
+  height:60%;
+  background-color:dimGray;
+  border-radius:50%;
+  position:absolute;
+  color:white;
+  text-align:center;
+  line-height:70px;
+  top:25%;
+  left:25%;
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .5s;
+  box-shadow: 0px 0px 50px 5px black;
+
+}
+
+.test7 {
+  width:60%;
+  height:60%;
+  background-color:dimGray;
+  border-radius:50%;
+  position:absolute;
+  color:white;
+  text-align:center;
+  line-height:70px;
+  top:25%;
+  left:25%;
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .6s;  
+  box-shadow: 0px 0px 50px 5px black;
+}
+
 .mask2 {
   top:15px;
   left:15px;
