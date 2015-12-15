@@ -200,7 +200,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/15/2015 10:42:41</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>12/15/2015 10:42:41</publishTime>
+      <publishTime>12/15/2015 11:51:54</publishTime>
     </File>
     <File Include="Default.aspx">
       <publishTime>12/15/2015 10:42:41</publishTime>
@@ -329,7 +329,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/15/2015 10:42:41</publishTime>
     </File>
     <File Include="Site.Master">
-      <publishTime>12/15/2015 11:29:30</publishTime>
+      <publishTime>12/15/2015 12:06:44</publishTime>
     </File>
     <File Include="Site.Mobile.Master">
       <publishTime>12/15/2015 10:42:41</publishTime>

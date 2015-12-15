@@ -13,7 +13,7 @@
     </asp:PlaceHolder>
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 <body>
     <form runat="server">
@@ -38,48 +38,45 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/Calendar.aspx">Calendar</a></li>
-                    </ul>
-                    <asp:LoginView runat="server" ViewStateMode="Disabled">
-                        <AnonymousTemplate>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Register">Register</a></li>
-                                <li><a runat="server" href="~/Account/Login">Log in</a></li>
-                            </ul>
-                        </AnonymousTemplate>
-                        <LoggedInTemplate>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %>!</a></li>
-                                <li>
-                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
-                                </li>
-                            </ul>
-                        </LoggedInTemplate>
-                    </asp:LoginView>
-                </div>
-            </div>
+        <div class="parent2">
+            <a runat="server" href="~/Calendar.aspx"><div class="test1"><i class="fa fa-calendar fa-2x"></i></div></a>
+            <a runat="server" href="~/Account/Register"><div class="test2"><i class="fa fa-plus-circle fa-2x"></i></div></a>
+            <a runat="server" href="~/Account/Login"><div class="test3"><i class="fa fa-user fa-2x"></i></div></a>
+            <a runat="server" href="~/"><div class="test4"><i class="fa fa-home fa-3x"></i></div></a>
+            <div class="mask2"><i class="fa fa-home fa-3x"></i></div>
         </div>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>- &copy; <%: DateTime.Now.Year %> - GOATS SUN -</p>
+                <p>&copy; <%: DateTime.Now.Year %> - GOATS SUN</p>
             </footer>
         </div>
     </form>
+    <script>$(document).ready(function () {
+
+    var active1 = false;
+    var active2 = false;
+    var active3 = false;
+    var active4 = false;
+
+    $('.parent2').on('mousedown touchstart', function () {
+
+        if (!active1) $(this).find('.test1').css({ 'background-color': 'gray', 'transform': 'translate(0px,125px)' });
+        else $(this).find('.test1').css({ 'background-color': 'dimGray', 'transform': 'none' });
+        if (!active2) $(this).find('.test2').css({ 'background-color': 'gray', 'transform': 'translate(60px,105px)' });
+        else $(this).find('.test2').css({ 'background-color': 'darkGray', 'transform': 'none' });
+        if (!active3) $(this).find('.test3').css({ 'background-color': 'gray', 'transform': 'translate(105px,60px)' });
+        else $(this).find('.test3').css({ 'background-color': 'silver', 'transform': 'none' });
+        if (!active4) $(this).find('.test4').css({ 'background-color': 'gray', 'transform': 'translate(125px,0px)' });
+        else $(this).find('.test4').css({ 'background-color': 'silver', 'transform': 'none' });
+        active1 = !active1;
+        active2 = !active2;
+        active3 = !active3;
+        active4 = !active4;
+
+    });
+});</script>
 </body>
 </html>
