@@ -77,7 +77,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - GOATS SUN</p>
+                <p>- &copy; <%: DateTime.Now.Year %> - GOATS SUN -</p>
             </footer>
         </div>
     </form>
