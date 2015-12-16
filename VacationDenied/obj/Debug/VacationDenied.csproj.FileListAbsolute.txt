@@ -129,7 +129,6 @@ C:\Users\Jbreezy\Desktop\GOAT\VacationDenied\bin\Microsoft.Owin.Security.Microso
 C:\Users\Jbreezy\Desktop\GOAT\VacationDenied\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\Jbreezy\Desktop\GOAT\VacationDenied\obj\Debug\VacationDenied.dll
 C:\Users\Jbreezy\Desktop\GOAT\VacationDenied\obj\Debug\VacationDenied.pdb
-C:\Users\Jbreezy\Desktop\GOAT\VacationDenied\obj\Debug\VacationDenied.csprojResolveAssemblyReference.cache
 C:\Users\Jbreezy\Git\GOAT\VacationDenied\bin\roslyn\csc.exe
 C:\Users\Jbreezy\Git\GOAT\VacationDenied\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\Jbreezy\Git\GOAT\VacationDenied\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -407,3 +406,8 @@ C:\Users\heller\Documents\Dev\cs\GOAT\VacationDenied\obj\Debug\VacationDenied.dl
 C:\Users\heller\Documents\Dev\cs\GOAT\VacationDenied\obj\Debug\VacationDenied.pdb
 C:\Users\Jbreezy\Git\GOAT\VacationDenied\obj\Debug\VacationDenied.Migrations.lastName.resources
 C:\Users\Jbreezy\Git\GOAT\VacationDenied\obj\Debug\VacationDenied.Migrations.VacationDays.resources
+C:\Users\Jbreezy\Desktop\GOAT\VacationDenied\obj\Debug\VacationDenied.Migrations.InitialCreate.resources
+C:\Users\Jbreezy\Desktop\GOAT\VacationDenied\obj\Debug\VacationDenied.Migrations.firstName.resources
+C:\Users\Jbreezy\Desktop\GOAT\VacationDenied\obj\Debug\VacationDenied.Migrations.lastName.resources
+C:\Users\Jbreezy\Desktop\GOAT\VacationDenied\obj\Debug\VacationDenied.Migrations.VacationDays.resources
+C:\Users\Jbreezy\Desktop\GOAT\VacationDenied\obj\Debug\VacationDenied.csproj.GenerateResource.Cache
