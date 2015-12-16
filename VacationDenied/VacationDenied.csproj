@@ -181,6 +181,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
+    <Content Include="Images\calendar.png" />
     <Content Include="RequestTimeOff.aspx" />
     <Content Include="Scripts\fullcalendar.css" />
     <Content Include="Scripts\fullcalendar.js" />
