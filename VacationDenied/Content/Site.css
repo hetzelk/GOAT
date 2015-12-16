@@ -137,7 +137,6 @@ body {
   top:25%;
   left:25%;
   transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .4s;
-  box-shadow: 0px 0px 50px 5px black;
 }
 
 .test6 {
@@ -152,7 +151,6 @@ body {
   top:25%;
   left:25%;
   transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .5s;
-  box-shadow: 0px 0px 50px 5px black;
 
 }
 
@@ -167,8 +165,7 @@ body {
   line-height:70px;
   top:25%;
   left:25%;
-  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .6s;  
-  box-shadow: 0px 0px 50px 5px black;
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .6s;
 }
 
 .mask2 {
@@ -189,4 +186,8 @@ body {
 
 .notvisible{
     display:none;
+}
+
+.padding{
+    padding-top:15px;
 }
