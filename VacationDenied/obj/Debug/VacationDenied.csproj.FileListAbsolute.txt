@@ -411,3 +411,4 @@ C:\Users\Jbreezy\Desktop\GOAT\VacationDenied\obj\Debug\VacationDenied.Migrations
 C:\Users\Jbreezy\Desktop\GOAT\VacationDenied\obj\Debug\VacationDenied.Migrations.lastName.resources
 C:\Users\Jbreezy\Desktop\GOAT\VacationDenied\obj\Debug\VacationDenied.Migrations.VacationDays.resources
 C:\Users\Jbreezy\Desktop\GOAT\VacationDenied\obj\Debug\VacationDenied.csproj.GenerateResource.Cache
+C:\Users\Jbreezy\Git\GOAT\VacationDenied\obj\Debug\VacationDenied.csprojResolveAssemblyReference.cache
