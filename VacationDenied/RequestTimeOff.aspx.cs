@@ -5,14 +5,21 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Diagnostics;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.AspNet.Identity.Owin;
 
 namespace VacationDenied
 {
     public partial class RequestTimeOff : System.Web.UI.Page
     {
+        public string currentUserId;
         public static List<DateTime> list = new List<DateTime>();
         protected void Page_Load(object sender, EventArgs e)
         {
+            currentUserId = HttpContext.Current.User.Identity.GetUserId();
+            var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
+            var currentUser = manager.FindById(User.Identity.GetUserId());
             if (!IsPostBack)
             {
                 Calendar1.Visible = true;
@@ -82,7 +89,27 @@ namespace VacationDenied
                     string startDate = newList[0].ToString("yyyy-MM-dd");
                     string endDate = newList[length].ToString("yyyy-MM-dd");
                     string status = "pending";
-                    // Enter into Database here
+                    List<string> ids = new List<string>();
+                    Models.VacationDate date = new Models.VacationDate();
+                    date.StartDate = DateTime.Parse(startDate);
+                    date.EndDate = DateTime.Parse(endDate);
+                    date.EmployeeID = currentUserId;
+                    date.Status = status;
+                    Models.DataClasses1DataContext vacaManager = new Models.DataClasses1DataContext();
+                    var dates = vacaManager.GetTable<Models.VacationDate>();
+                    var q =
+                    from c in vacaManager.VacationDates
+                    where c.EmployeeID == currentUserId
+                    select c;
+                    foreach (Models.VacationDate c in q)
+                    {
+                        ids.Add(c.Id);
+                    }
+                    int Id = ids.Count + 1;
+                    date.Id = Id.ToString();
+                    vacaManager.VacationDates.InsertOnSubmit(date);
+                    vacaManager.SubmitChanges();
+
 
                 } catch (FormatException)
                 {
