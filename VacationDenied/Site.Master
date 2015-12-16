@@ -38,22 +38,41 @@
             </Scripts>
         </asp:ScriptManager>
         
-        <div class="parent2">
-            <a runat="server" href="~/Calendar.aspx"><div class="test1"><i class="fa fa-calendar fa-2x"></i></div></a>
-            <a runat="server" href="~/Account/Register"><div class="test2"><i class="fa fa-plus-circle fa-2x"></i></div></a>
-            <a runat="server" href="~/Account/Login"><div class="test3"><i class="fa fa-user fa-2x"></i></div></a>
-            <a runat="server" href="~/" title="Home"><div class="test4"><i class="fa fa-home fa-3x"></i></div></a>
-           <!-- <a runat="server" href="~/"><div class="test5"><i class="fa fa-user fa-3x"></i></div></a>
-            <a runat="server" href="~/"><div class="test6"><i class="fa fa-plus-circle fa-2x"></i></div></a>
+
+        <asp:LoginView runat="server" ViewStateMode="Disabled">
+        <AnonymousTemplate>
+          <div class="parent2">
+            <a runat="server" href="~/" title="Home"><div class="test1"><i class="fa fa-home fa-3x"></i></div></a>
+            <a runat="server" href="~/Account/Login" title="Login"><div class="test2"><i class="fa fa-user fa-2x"></i></div></a>
+            <a runat="server" href="~/Account/Register" title="Register"><div class="test3"><i class="fa fa-plus-circle fa-2x"></i></div></a>
+            <a runat="server" href="~/Calendar.aspx" title="Calendar"><div class="test4"><i class="fa fa-calendar fa-2x"></i></div></a>            
+            <!-- <a runat="server" href="~/"><div class="test6"><i class="fa fa-plus-circle fa-2x"></i></div></a>
             <a runat="server" href="~/"><div class="test7"><i class="fa fa-home fa-2x"></i></div></a>-->
-            <div class="mask2"><i class="fa fa-home fa-3x"></i></div>
-        </div>
+            <div class="mask2"><i class="fa fa-navicon fa-3x"></i></div>
+          </div>
+        </AnonymousTemplate>
+        <LoggedInTemplate>
+          <div class="parent2">
+            <a runat="server" href="~/" title="Home"><div class="test1"><i class="fa fa-home fa-3x"></i></div></a>
+            <div class="test2 "><asp:LoginStatus runat="server" LogoutText="" class="fa fa-lock fa-3x" LogoutAction="Redirect" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" title="Logout"/></div>
+            <a runat="server" href="~/Account/Register" title="Register"><div class="test3"><i class="fa fa-plus-circle fa-2x"></i></div></a>
+            <a runat="server" href="~/Calendar.aspx" title="Calendar"><div class="test4"><i class="fa fa-calendar fa-2x"></i></div></a>
+            
+            
+            
+            <!-- <a runat="server" href="~/"><div class="test6"><i class="fa fa-plus-circle fa-2x"></i></div></a>
+            <a runat="server" href="~/"><div class="test7"><i class="fa fa-home fa-2x"></i></div></a>-->
+            <div class="mask2"><i class="fa fa-navicon fa-3x"></i></div>
+          </div>
+        </LoggedInTemplate>
+        </asp:LoginView>
+
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p class="white">&copy; <%: DateTime.Now.Year %> - GOATS SUN</p>
+                <p class="white">&copy; <%: DateTime.Now.Year %> - G.O.A.T. Vacation Request Application</p>
             </footer>
         </div>
     </form>
@@ -67,21 +86,21 @@
     var active6 = false;
     var active7 = false;
 
-    $('.parent2').on('mousedown touchstart', function () {
+    $('.parent2').on('mousedown', function () {
 
-        if (!active1) $(this).find('.test1').css({ 'background-color': 'gray', 'transform': 'translate(-30px,80px)' });
+        if (!active1) $(this).find('.test1').css({ 'background-color': 'gray', 'transform': 'translate(100px,-10px)' });
         else $(this).find('.test1').css({ 'background-color': 'dimGray', 'transform': 'none' });
-        if (!active2) $(this).find('.test2').css({ 'background-color': 'gray', 'transform': 'translate(30px,115px)' });
+        if (!active2) $(this).find('.test2').css({ 'background-color': 'gray', 'transform': 'translate(175px,-10px)' });
         else $(this).find('.test2').css({ 'background-color': 'darkGray', 'transform': 'none' });
-        if (!active3) $(this).find('.test3').css({ 'background-color': 'gray', 'transform': 'translate(-30px,150px)' });
+        if (!active3) $(this).find('.test3').css({ 'background-color': 'gray', 'transform': 'translate(250px,-10px)' });
         else $(this).find('.test3').css({ 'background-color': 'silver', 'transform': 'none' });
-        if (!active4) $(this).find('.test4').css({ 'background-color': 'gray', 'transform': 'translate(30px,185px)' });
+        if (!active4) $(this).find('.test4').css({ 'background-color': 'gray', 'transform': 'translate(325px,-10px)' });
         else $(this).find('.test4').css({ 'background-color': 'silver', 'transform': 'none' });
-        if (!active5) $(this).find('.test5').css({ 'background-color': 'gray', 'transform': 'translate(-30px,210px)' });
+        if (!active5) $(this).find('.test5').css({ 'background-color': 'gray', 'transform': 'translate(400px,-10px)' });
         else $(this).find('.test5').css({ 'background-color': 'silver', 'transform': 'none' });
-        if (!active6) $(this).find('.test6').css({ 'background-color': 'gray', 'transform': 'translate(30px,245px)' });
+        if (!active6) $(this).find('.test6').css({ 'background-color': 'gray', 'transform': 'translate(475px,-10px)' });
         else $(this).find('.test6').css({ 'background-color': 'silver', 'transform': 'none' });
-        if (!active7) $(this).find('.test7').css({ 'background-color': 'gray', 'transform': 'translate(-30px,280px)' });
+        if (!active7) $(this).find('.test7').css({ 'background-color': 'gray', 'transform': 'translate(550px,-10px)' });
         else $(this).find('.test7').css({ 'background-color': 'silver', 'transform': 'none' });
         active1 = !active1;
         active2 = !active2;
@@ -92,6 +111,7 @@
         active7 = !active7;
 
     });
-});</script>
+});
+    </script>
 </body>
 </html>
