@@ -55,18 +55,49 @@ namespace VacationDenied
         {
             if (Session["SelectedDates"] != null)
             {
-                List<DateTime> newList = (List<DateTime>)Session["SelectedDates"];
-                int length = newList.Count - 1;
-                string startDate = newList[0].ToString("yyyy-MM-dd");
-                string endDate = newList[length].ToString("yyyy-MM-dd");
-                string status = "pending";
+                try
+                {
+                    List<DateTime> newList = (List<DateTime>)Session["SelectedDates"];
+                    List<int> dayInt = new List<int>();
+                    bool flag = false;
+                    foreach (DateTime dt in newList)
+                    {
+                        int dayTracker = Convert.ToInt32(dt.ToString("dd"));
+                        dayInt.Add(dayTracker);
+                    }
+                    int index = 1;
+                    for (int i = 0; i < dayInt.Count - 1; i++)
+                    {
+                        if (dayInt[i] + 1 < dayInt[index])
+                        {
+                            flag = true;
+                        }
+                        index++;
+                    }
+                    if (flag)
+                    {
+                        throw new FormatException();
+                    }
+                    int length = newList.Count - 1;
+                    string startDate = newList[0].ToString("yyyy-MM-dd");
+                    string endDate = newList[length].ToString("yyyy-MM-dd");
+                    string status = "pending";
+                    // Enter into Database here
 
+                } catch (FormatException)
+                {
+                    string Message = "Please enter a sequence of Start Date and End Date and submit each one seperately, Success Example: Monday 1 Tuesday 2 Wednesday 3...Error Example: Monday 1 Thursday 4 Friday 5";
+                    System.Web.UI.ScriptManager.RegisterStartupScript(this, typeof(Page), "alert", "alert('" + Message + "')", true);
+                    
+                }
+
+            } 
 
                 //write to database with status of pending for admin to check
                 //clear session
                 //have pop up "successfuly scheduled"
 
-            }
+        
         }
 
         protected void Button2_Click(object sender, EventArgs e)
