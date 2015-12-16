@@ -14,6 +14,8 @@ namespace VacationDenied.Models
     public class ApplicationUser : IdentityUser
     {
         public string firstName { get; set; }
+        public string lastName { get; set; }
+        public int VacationDays { get; set; }
         public ClaimsIdentity GenerateUserIdentity(ApplicationUserManager manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType

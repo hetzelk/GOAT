@@ -261,7 +261,6 @@ C:\Users\Keith Hetzel\Documents\GitHub\GOAT\VacationDenied\bin\Microsoft.Owin.Se
 C:\Users\Keith Hetzel\Documents\GitHub\GOAT\VacationDenied\obj\Debug\VacationDenied.csprojResolveAssemblyReference.cache
 C:\Users\Keith Hetzel\Documents\GitHub\GOAT\VacationDenied\obj\Debug\VacationDenied.dll
 C:\Users\Keith Hetzel\Documents\GitHub\GOAT\VacationDenied\obj\Debug\VacationDenied.pdb
-C:\Users\Jbreezy\Git\GOAT\VacationDenied\obj\Debug\VacationDenied.csprojResolveAssemblyReference.cache
 C:\Users\Jbreezy\Git\GOAT\VacationDenied\obj\Debug\VacationDenied.Migrations.InitialCreate.resources
 C:\Users\Jbreezy\Git\GOAT\VacationDenied\obj\Debug\VacationDenied.csproj.GenerateResource.Cache
 C:\Users\Jbreezy\Git\GOAT\VacationDenied\obj\Debug\VacationDenied.Migrations.firstName.resources
@@ -406,3 +405,5 @@ C:\Users\heller\Documents\Dev\cs\GOAT\VacationDenied\obj\Debug\VacationDenied.Mi
 C:\Users\heller\Documents\Dev\cs\GOAT\VacationDenied\obj\Debug\VacationDenied.csproj.GenerateResource.Cache
 C:\Users\heller\Documents\Dev\cs\GOAT\VacationDenied\obj\Debug\VacationDenied.dll
 C:\Users\heller\Documents\Dev\cs\GOAT\VacationDenied\obj\Debug\VacationDenied.pdb
+C:\Users\Jbreezy\Git\GOAT\VacationDenied\obj\Debug\VacationDenied.Migrations.lastName.resources
+C:\Users\Jbreezy\Git\GOAT\VacationDenied\obj\Debug\VacationDenied.Migrations.VacationDays.resources

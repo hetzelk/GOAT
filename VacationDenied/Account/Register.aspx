@@ -26,6 +26,7 @@
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="LastName"
                     CssClass="text-danger" ErrorMessage="The Last Name field is required." />
             </div>
+            </div>
         <div class="form-group">
              <asp:Label runat="server" AssociatedControlID="UserName" CssClass="col-md-2 control-label" class ="white">Username</asp:Label>
              <div class="col-md-10">

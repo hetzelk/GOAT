@@ -382,6 +382,14 @@
     <Compile Include="Migrations\201512151635131_firstName.Designer.cs">
       <DependentUpon>201512151635131_firstName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512161435158_lastName.cs" />
+    <Compile Include="Migrations\201512161435158_lastName.Designer.cs">
+      <DependentUpon>201512161435158_lastName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512161436132_VacationDays.cs" />
+    <Compile Include="Migrations\201512161436132_VacationDays.Designer.cs">
+      <DependentUpon>201512161436132_VacationDays.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -417,6 +425,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512151635131_firstName.resx">
       <DependentUpon>201512151635131_firstName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512161435158_lastName.resx">
+      <DependentUpon>201512161435158_lastName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512161436132_VacationDays.resx">
+      <DependentUpon>201512161436132_VacationDays.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
