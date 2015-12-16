@@ -105,7 +105,7 @@ namespace VacationDenied
                     {
                         ids.Add(c.Id);
                     }
-                    int Id = ids.Count + 1;
+                    int Id = ids.Count + 2;
                     date.Id = Id.ToString();
                     vacaManager.VacationDates.InsertOnSubmit(date);
                     vacaManager.SubmitChanges();
