@@ -54,7 +54,7 @@
         <LoggedInTemplate>
           <div class="parent2">
             <a runat="server" href="~/" title="Home"><div class="test1"><i class="fa fa-home fa-3x"></i></div></a>
-            <div class="test2 "><asp:LoginStatus runat="server" LogoutText="" class="fa fa-lock fa-3x" LogoutAction="Redirect" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" title="Logout"/></div>
+            <div class="test2"><asp:LoginStatus runat="server" LogoutText="" class="white fa fa-lock fa-3x" LogoutAction="Redirect" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" title="Logout"/></div>
             <a runat="server" href="~/Account/Register" title="Register"><div class="test3"><i class="fa fa-plus-circle fa-2x"></i></div></a>
             <a runat="server" href="~/Calendar.aspx" title="Calendar"><div class="test4"><i class="fa fa-calendar fa-2x"></i></div></a>
             
