@@ -208,6 +208,7 @@
     <Content Include="Account\Web.config" />
     <Content Include="Images\calendar.png" />
     <Content Include="jsonroute.aspx" />
+    <Content Include="MyRequests.aspx" />
     <Content Include="RequestReview.aspx" />
     <Content Include="RequestTimeOff.aspx" />
     <Content Include="Scripts\fullcalendar.css" />
@@ -439,6 +440,13 @@
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="MyRequests.aspx.cs">
+      <DependentUpon>MyRequests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyRequests.aspx.designer.cs">
+      <DependentUpon>MyRequests.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RequestReview.aspx.cs">
       <DependentUpon>RequestReview.aspx</DependentUpon>

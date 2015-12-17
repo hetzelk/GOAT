@@ -69,6 +69,7 @@ namespace VacationDenied
                 c.Status = "accepted";
                 manager.SubmitChanges();
             }
+            Response.Redirect(Request.RawUrl);
         }
 
         protected void Button2_Click(object sender, EventArgs e)
@@ -83,6 +84,19 @@ namespace VacationDenied
                 c.Status = "denied";
                 manager.SubmitChanges();
             }
+            DateTime start = dates[DropDownList1.SelectedIndex].StartDate;
+            DateTime end = dates[DropDownList1.SelectedIndex].EndDate;
+            TimeSpan range = end.Subtract(start);
+            int days = range.Days;
+            if (days < 2)
+            {
+                days += 1;
+            }
+            var userManager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
+            var currentUser = userManager.FindById(dates[DropDownList1.SelectedIndex].EmployeeID);
+            currentUser.VacationDays = currentUser.VacationDays + days;
+            userManager.Update(currentUser);
+            Response.Redirect(Request.RawUrl);
         }
     }
 }
