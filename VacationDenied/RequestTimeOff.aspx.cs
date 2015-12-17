@@ -16,10 +16,11 @@ namespace VacationDenied
         private string currentUserId;
         public static List<DateTime> list = new List<DateTime>();
         public Models.ApplicationUser currentUser;
+        public ApplicationUserManager manager;
         protected void Page_Load(object sender, EventArgs e)
         {
             currentUserId = HttpContext.Current.User.Identity.GetUserId();
-            var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
+            manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
             currentUser = manager.FindById(User.Identity.GetUserId());
             if (!IsPostBack)
             {
@@ -111,6 +112,7 @@ namespace VacationDenied
                     vacaManager.VacationDates.InsertOnSubmit(date);
                     vacaManager.SubmitChanges();
                     currentUser.VacationDays -= dayInt.Count;
+                    manager.Update(currentUser);
 
 
                 } catch (FormatException)

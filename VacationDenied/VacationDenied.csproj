@@ -182,6 +182,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
     <Content Include="Images\calendar.png" />
+    <Content Include="RequestReview.aspx" />
     <Content Include="RequestTimeOff.aspx" />
     <Content Include="Scripts\fullcalendar.css" />
     <Content Include="Scripts\fullcalendar.js" />
@@ -406,6 +407,13 @@
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestReview.aspx.cs">
+      <DependentUpon>RequestReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RequestReview.aspx.designer.cs">
+      <DependentUpon>RequestReview.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RequestTimeOff.aspx.cs">
       <DependentUpon>RequestTimeOff.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
