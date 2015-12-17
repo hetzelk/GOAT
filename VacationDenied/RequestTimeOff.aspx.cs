@@ -97,6 +97,7 @@ namespace VacationDenied
                     date.EndDate = DateTime.Parse(endDate);
                     date.EmployeeID = currentUserId;
                     date.Status = status;
+                    date.Description = Description.Text;
                     Models.DataClasses1DataContext vacaManager = new Models.DataClasses1DataContext();
                     var dates = vacaManager.GetTable<Models.VacationDate>();
                     var q =
