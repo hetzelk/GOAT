@@ -1,7 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RequestTimeOff.aspx.cs" Inherits="VacationDenied.RequestTimeOff" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
+    <div>
+        <label><%: currentUser.VacationDays %></label>
+    </div>
     <div class="col-md-6 col-md-offset-3">
         <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="black" BorderWidth="1px" Font-Names="Verdana" Font-Size="13pt" ForeColor="Black" Height="400px" NextPrevFormat="ShortMonth" OnSelectionChanged="Calendar1_SelectionChanged" Width="600px" BorderStyle="Dotted" Caption="Requested Days Off" CaptionAlign="Top" FirstDayOfWeek="Sunday" OnDayRender="Calendar1_DayRender" ShowGridLines="True">
             <DayHeaderStyle Font-Bold="True" Font-Size="12pt" />

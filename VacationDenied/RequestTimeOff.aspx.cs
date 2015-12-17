@@ -13,13 +13,14 @@ namespace VacationDenied
 {
     public partial class RequestTimeOff : System.Web.UI.Page
     {
-        public string currentUserId;
+        private string currentUserId;
         public static List<DateTime> list = new List<DateTime>();
+        public Models.ApplicationUser currentUser;
         protected void Page_Load(object sender, EventArgs e)
         {
             currentUserId = HttpContext.Current.User.Identity.GetUserId();
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
-            var currentUser = manager.FindById(User.Identity.GetUserId());
+            currentUser = manager.FindById(User.Identity.GetUserId());
             if (!IsPostBack)
             {
                 Calendar1.Visible = true;
@@ -109,6 +110,7 @@ namespace VacationDenied
                     date.Id = Id.ToString();
                     vacaManager.VacationDates.InsertOnSubmit(date);
                     vacaManager.SubmitChanges();
+                    currentUser.VacationDays -= dayInt.Count;
 
 
                 } catch (FormatException)
