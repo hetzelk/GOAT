@@ -9,11 +9,30 @@
 <script type="text/javascript" src="Scripts/fullcalendar.js"></script>
         <script>
             $(document).ready(function () {
-
+                
+                $.ajax({
+                    type: "GET",
+                    url: "jsonroutes.aspx",
+                    dataType: "json",
+               
+                    success: function(data){
+                        console.log(JSON.parse(data));
+                        $.each(JSON.parse(data), function(){
+                            var event = {
+                                allDay: true,
+                                title: 'Title',
+                                start: data.StartDate,
+                                end: data.EndDate,
+                            }
+                        });
+                    }
+                });
+                
+                
                 $('#calendar').fullCalendar({
                     theme: true,
                     themeButtonIcons: false,
-                    events: [
+                        events: [
                         {
                             allDay: true,
                             title: 'Goat',

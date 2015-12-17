@@ -11,6 +11,7 @@ using Owin;
 using System.Data.SqlClient;
 using System.Data;
 
+
 namespace VacationDenied
 {
     public partial class Calendar : System.Web.UI.Page
@@ -28,6 +29,7 @@ namespace VacationDenied
             from c in poop.VacationDates
             where c.EmployeeID == currentUserId
             select c;
+
             foreach (Models.VacationDate c in q)
             {
                 datess.Add(c);
