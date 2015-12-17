@@ -91,7 +91,7 @@ namespace VacationDenied
                     string startDate = newList[0].ToString("yyyy-MM-dd");
                     string endDate = newList[length].ToString("yyyy-MM-dd");
                     string status = "pending";
-                    List<int> ids = new List<int>();
+                    int ids = 0;
                     Models.VacationDate date = new Models.VacationDate();
                     date.StartDate = DateTime.Parse(startDate);
                     date.EndDate = DateTime.Parse(endDate);
@@ -102,13 +102,13 @@ namespace VacationDenied
                     var dates = vacaManager.GetTable<Models.VacationDate>();
                     var q =
                     from c in vacaManager.VacationDates
-                    where c.EmployeeID == currentUserId
+                    where c.Id < 100000
                     select c;
                     foreach (Models.VacationDate c in q)
                     {
-                        ids.Add(c.Id);
+                        ids += 1;
                     }
-                    int Id = ids.Count + 2;
+                    int Id = ids + 1;
                     date.Id = Id;
                     vacaManager.VacationDates.InsertOnSubmit(date);
                     vacaManager.SubmitChanges();
