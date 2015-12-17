@@ -17,6 +17,7 @@ namespace VacationDenied
     {
         public List<Models.VacationDate> dates;
         public List<string> dateStrngs;
+        public string startTime;
         protected void Page_Load(object sender, EventArgs e)
         {
             Models.DataClasses1DataContext manager = new Models.DataClasses1DataContext();
@@ -32,9 +33,15 @@ namespace VacationDenied
                 dateStrngs.Add(c.EmployeeID);
 
             }
-            DropDownList1.DataSource = dates;
-            DropDownList1.DataTextField = "Description";
-            DropDownList1.DataBind();
+            ListBox1.DataSource = dates;
+            ListBox1.DataTextField = "EmployeeID";
+            ListBox1.DataBind();
+        }
+
+        protected void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TextBox1.Text = dates[ListBox1.SelectedIndex].EndDate.ToString();
+            TextBox1.DataBind();
         }
     }
 }
