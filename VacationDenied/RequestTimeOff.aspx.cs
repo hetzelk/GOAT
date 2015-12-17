@@ -91,7 +91,7 @@ namespace VacationDenied
                     string startDate = newList[0].ToString("yyyy-MM-dd");
                     string endDate = newList[length].ToString("yyyy-MM-dd");
                     string status = "pending";
-                    List<string> ids = new List<string>();
+                    List<int> ids = new List<int>();
                     Models.VacationDate date = new Models.VacationDate();
                     date.StartDate = DateTime.Parse(startDate);
                     date.EndDate = DateTime.Parse(endDate);
@@ -109,7 +109,7 @@ namespace VacationDenied
                         ids.Add(c.Id);
                     }
                     int Id = ids.Count + 2;
-                    date.Id = Id.ToString();
+                    date.Id = Id;
                     vacaManager.VacationDates.InsertOnSubmit(date);
                     vacaManager.SubmitChanges();
                     currentUser.VacationDays -= dayInt.Count;

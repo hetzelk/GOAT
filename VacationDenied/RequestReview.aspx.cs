@@ -16,13 +16,11 @@ namespace VacationDenied
     public partial class RequestReview : System.Web.UI.Page
     {
         public List<Models.VacationDate> dates;
-        public List<string> dateStrngs;
         public string startTime;
         protected void Page_init(object sender, EventArgs e)
         {
             Models.DataClasses1DataContext manager = new Models.DataClasses1DataContext();
             dates = new List<Models.VacationDate>();
-            dateStrngs = new List<string>();
             Models.VacationDate empty = new Models.VacationDate();
             dates.Add(empty);
             var q =
@@ -32,7 +30,6 @@ namespace VacationDenied
             foreach (Models.VacationDate c in q)
             {
                 dates.Add(c);
-                dateStrngs.Add(c.EmployeeID);
             }
             if (!IsPostBack)
             {

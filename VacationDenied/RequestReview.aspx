@@ -9,12 +9,24 @@
         <ContentTemplate>
             <fieldset>
                 <legend>
-                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-                    <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
-                    <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
-                    <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
-                    <asp:Button ID="Button1" runat="server" Text="Accept" OnClick="Button1_Click"/>
-                    <asp:Button ID="Button2" runat="server" Text="Deny" OnClick="Button2_Click"/>
+                    <div class="left col-md-3">
+                    <p class="white">Name: </p><p class="white">Description: </p><p class="white">Starting Request Date: </p><p class="white">Ending Request Date: </p></div>
+
+                    <div class="left col-md-3">
+                    <asp:Label ID="Label4" runat="server" Text="Load a request item." CssClass="white"></asp:Label><br />
+
+                    <asp:Label ID="Label3" runat="server" Text="Load a request item." CssClass="white"></asp:Label><br />
+
+                    <asp:Label ID="Label1" runat="server" Text="Load a request item." CssClass="white"></asp:Label><br />
+
+                    <asp:Label ID="Label2" runat="server" Text="Load a request item." CssClass="white"></asp:Label></div>
+                    
+                    <br />
+                    <div class="col-md-12 clear">
+                    <asp:Button CssClass="btn btn-lrg" ID="Button1" runat="server" Text="Accept" OnClick="Button1_Click"/>
+                    <asp:Button CssClass="btn btn-lrg" ID="Button2" runat="server" Text="Deny" OnClick="Button2_Click"/>
+
+                    </div>
                 </legend>
             </fieldset>
         </ContentTemplate>

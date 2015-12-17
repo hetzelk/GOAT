@@ -193,3 +193,15 @@ body {
     width:450px;
     height:250px;
 }
+
+.left{
+    float:left;
+}
+
+.right{
+    float:right;
+}
+
+clear{
+    clear:both;
+}

@@ -80,7 +80,7 @@ namespace VacationDenied.Models
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private string _Id;
+		private int _Id;
 		
 		private string _EmployeeID;
 		
@@ -96,7 +96,7 @@ namespace VacationDenied.Models
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnIdChanging(string value);
+    partial void OnIdChanging(int value);
     partial void OnIdChanged();
     partial void OnEmployeeIDChanging(string value);
     partial void OnEmployeeIDChanged();
@@ -115,8 +115,8 @@ namespace VacationDenied.Models
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="NChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string Id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="int NOT NULL", IsPrimaryKey=true)]
+		public int Id
 		{
 			get
 			{
