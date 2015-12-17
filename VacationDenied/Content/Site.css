@@ -4,6 +4,9 @@ body {
     padding-bottom: 20px;
 }
 
+legend{
+    border: none;
+}
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
@@ -204,4 +207,8 @@ body {
 
 clear{
     clear:both;
+}
+
+.bottompad{
+    padding-bottom:15px;
 }

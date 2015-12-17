@@ -53,7 +53,7 @@ namespace VacationDenied
                 Label3.Text = dates[DropDownList1.SelectedIndex].Description;
                 var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
                 var currentUser = manager.FindById(dates[DropDownList1.SelectedIndex].EmployeeID);
-                Label4.Text = currentUser.firstName + currentUser.lastName;
+                Label4.Text = currentUser.firstName +" "+ currentUser.lastName;
             }
         }
 
