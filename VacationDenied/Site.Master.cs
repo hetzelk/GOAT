@@ -7,7 +7,8 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
-/*aspnet_compiler -p "C:\Users\Keith Hetzel\Documents\GitHub\GOAT\VacationDenied" -v / "C:\Users\Keith Hetzel\Documents\GitHub\GOATFTP" -u*/
+/*C:\Windows\Microsoft.NET\Framework\v4.0.30319>
+aspnet_compiler -p "C:\Users\Keith Hetzel\Documents\GitHub\GOAT\VacationDenied" -v / "C:\Users\Keith Hetzel\Documents\GitHub\GOATFTP" -u*/
 namespace VacationDenied
 {
     public partial class SiteMaster : MasterPage

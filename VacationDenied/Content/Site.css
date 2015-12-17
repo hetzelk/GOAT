@@ -150,22 +150,8 @@ body {
   line-height:70px;
   top:25%;
   left:25%;
-  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .5s;
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .1s;
 
-}
-
-.test7 {
-  width:60%;
-  height:60%;
-  background-color:dimGray;
-  border-radius:50%;
-  position:absolute;
-  color:white;
-  text-align:center;
-  line-height:70px;
-  top:25%;
-  left:25%;
-  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .6s;
 }
 
 .mask2 {
@@ -190,4 +176,20 @@ body {
 
 .padding{
     padding-top:15px;
+}
+
+.bigpadding{
+    font-size:25px;
+    padding-top:15px;
+}
+
+.bigger{
+    font-size:18px;
+}
+
+.caltextbox{
+    margin-left:-15px;
+    border-radius:5px;
+    width:450px;
+    height:250px;
 }
