@@ -7,6 +7,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using VacationDenied.Models;
+using System.Net.Mail;
 
 namespace VacationDenied
 {
@@ -15,6 +16,16 @@ namespace VacationDenied
         public Task SendAsync(IdentityMessage message)
         {
             // Plug in your email service here to send an email.
+            MailMessage mail = new MailMessage("rockitshipshawty@gmail.com", message.Destination);
+            SmtpClient client = new SmtpClient();
+            client.Port = 465;
+            client.DeliveryMethod = SmtpDeliveryMethod.Network;
+            client.UseDefaultCredentials = false;
+            client.Host = "smtp.gmail.com";
+            client.UseDefaultCredentials = true;
+            mail.Subject = message.Subject;
+            mail.Body = message.Body;
+            client.Send(mail);
             return Task.FromResult(0);
         }
     }
