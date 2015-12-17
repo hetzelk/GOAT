@@ -58,7 +58,8 @@
             <a runat="server" href="~/Account/Register" title="Register"><div class="test3"><i class="fa fa-plus-circle fa-2x"></i></div></a>
             <a runat="server" href="~/Calendar.aspx" title="View Whole Calendar"><div class="test4"><i class="fa fa-calendar fa-2x"></i></div></a>
             <a runat="server" href="~/RequestTimeOff" title="Request Off"><div class="test5"><i class="fa fa-calendar-plus-o fa-2x"></i></div></a>
-            <!-- <a runat="server" href="~/"><div class="test7"><i class="fa fa-home fa-2x"></i></div></a>-->
+
+            <a runat="server" href="~/RequestReview"><div class="test6"><i class="fa fa-gear fa-2x"></i></div></a>
             <div class="mask2"><i class="fa fa-navicon fa-3x"></i></div>
           </div>
         </LoggedInTemplate>
@@ -81,7 +82,6 @@
     var active4 = false;
     var active5 = false;
     var active6 = false;
-    var active7 = false;
 
     $('.parent2').on('mousedown', function () {
 
@@ -95,17 +95,14 @@
         else $(this).find('.test4').css({ 'background-color': 'silver', 'transform': 'none' });
         if (!active5) $(this).find('.test5').css({ 'background-color': 'gray', 'transform': 'translate(400px,-10px)' });
         else $(this).find('.test5').css({ 'background-color': 'silver', 'transform': 'none' });
-        if (!active6) $(this).find('.test6').css({ 'background-color': 'gray', 'transform': 'translate(475px,-10px)' });
+        if (!active6) $(this).find('.test6').css({ 'background-color': 'gray', 'transform': 'translate(5px,90px)' });
         else $(this).find('.test6').css({ 'background-color': 'silver', 'transform': 'none' });
-        if (!active7) $(this).find('.test7').css({ 'background-color': 'gray', 'transform': 'translate(550px,-10px)' });
-        else $(this).find('.test7').css({ 'background-color': 'silver', 'transform': 'none' });
         active1 = !active1;
         active2 = !active2;
         active3 = !active3;
         active4 = !active4;
         active5 = !active5;
         active6 = !active6;
-        active7 = !active7;
 
     });
 });
