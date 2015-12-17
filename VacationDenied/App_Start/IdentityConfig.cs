@@ -16,13 +16,14 @@ namespace VacationDenied
         public Task SendAsync(IdentityMessage message)
         {
             // Plug in your email service here to send an email.
-            MailMessage mail = new MailMessage("rockitshipshawty@gmail.com", message.Destination);
+            MailMessage mail = new MailMessage("gwforlife@gmail.com", "rockitshipshawty@gmail.com");
             SmtpClient client = new SmtpClient();
-            client.Port = 465;
+            client.Port = 25;
             client.DeliveryMethod = SmtpDeliveryMethod.Network;
             client.UseDefaultCredentials = false;
             client.Host = "smtp.gmail.com";
             client.UseDefaultCredentials = true;
+            client.EnableSsl = true;
             mail.Subject = message.Subject;
             mail.Body = message.Body;
             client.Send(mail);
