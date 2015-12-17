@@ -31,17 +31,7 @@ namespace VacationDenied
             {
                 dates.Add(c);
                 dateStrngs.Add(c.EmployeeID);
-
             }
-            ListBox1.DataSource = dates;
-            ListBox1.DataTextField = "EmployeeID";
-            ListBox1.DataBind();
-        }
-
-        protected void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            TextBox1.Text = dates[ListBox1.SelectedIndex].EndDate.ToString();
-            TextBox1.DataBind();
         }
     }
 }
