@@ -114,6 +114,7 @@ namespace VacationDenied
                     vacaManager.SubmitChanges();
                     currentUser.VacationDays -= dayInt.Count;
                     manager.Update(currentUser);
+                    manager.SendEmail(currentUserId, "whatever", "whatever");
 
 
                 } catch (FormatException)
